@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario Contacto | J CODES </title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulario de contacto</h1>
+  <form action="enviar.php" method="post">
+    <hr>
+    <br>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" size="30" maxlength="50" required>
+    <br>
+    <br>
+    <label for="asunto">Asunto:</label>
+    <input type="text" id="asunto" name="asunto" size="30" maxlength="70" required>
+    <br>
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" size="30" maxlength="70" required>
+    <br>
+    <br>
+    <label for="mensaje">Mensaje:</label>
+    <textarea id="mensaje" name="mensaje" size="30" maxlength="50"required></textarea>
+    <br>
+    <button type="submit">Enviar</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
