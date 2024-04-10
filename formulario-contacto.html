@@ -4,7 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulario Contacto | J CODES </title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
   <h1>Formulario de contacto</h1>
@@ -24,7 +54,7 @@
     <br>
     <br>
     <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" size="30" maxlength="50"required></textarea>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="30" required></textarea>
     <br>
     <button type="submit">Enviar</button>
   </form>
