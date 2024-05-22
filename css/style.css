@@ -27,3 +27,8 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
+h5 {
+  text-shadow: 2px 2px 4px #000; 
+  color: #FFD700; 
+  font-family: 'Bubblegum Sans', cursive; 
+}
