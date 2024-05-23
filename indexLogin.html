@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar sesion</title>
+    <title>Iniciar Sesion</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="icon" href="img/icon.jpg">
 </head>
@@ -14,15 +14,15 @@
             <h3>Bienvenido</h3>
             <form method="post" action="">
                 <div class="input-box">
-                    <input type="email" placeholder="Email" class="input-control" name="Email">
+                    <input type="email" placeholder="Email" class="input-control" name="Email" id = 'Email'>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" class="input-control" name="password">
+                    <input type="password" placeholder="Password" class="input-control" name="password" id = 'Password'>
                     <div class="input-link">
-                        <a href="recuperarC.html"class="gradient-text">has olvidado tu contraseña</a><!-- eticketa enlace para redirigir --> 
+                        <a href="recuperarC.html"class="gradient-text">Has olvidado tu contraseña</a><!-- eticketa enlace para redirigir --> 
                     </div>
                 </div>
-                <button  name="btningresar" type="submit" class="btn" >Iniciar sesión</button> 
+                <input type="submit" onclick=' return enviarFormulario()' value="Iniciar sesion" class="btn">
                  
             </form>
             <p> <a href="index.html" class="gradient-text"> Iniciar como invitado</a></p>
@@ -31,6 +31,10 @@
         </div>
 
     </section>
+    <div id="error"></div>
+
+
+    <script src="app.js"></script>
     
 </body>
 </html>
