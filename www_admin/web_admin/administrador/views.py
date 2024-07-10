@@ -52,6 +52,9 @@ def actualizar(request):
             request.POST.get('correo') and 
             request.POST.get('telefono') and 
             request.POST.get('f_nac')):
+            user_id_old = request.POST.get('id')
+            user_old= Usuarios()
+            user_old = Usuarios.objects.get(id = user_id_old)
             user = Usuarios()
             user.id = request.POST.get('id')
             user.nombre = request.POST.get('nombre')
@@ -59,6 +62,7 @@ def actualizar(request):
             user.correo = request.POST.get('correo')
             user.telefono = request.POST.get('telefono')
             user.f_nac = request.POST.get('f_nac')
+            user.f_registro = user_old.f_registro
             user.save()
             return redirect('listar')
     else:
