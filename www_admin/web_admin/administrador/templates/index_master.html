@@ -7,29 +7,26 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="images/icon.jpg" type="image" />
+    <link rel="icon" href="{% static 'FrWork/admin_lte/build/images/icon.jpg' %}" type="image/x-icon" />
 
     <title>J_CODES |</title>
 
     <!-- Bootstrap -->
-    <link href="{% static '/FrWork/admin_lte/vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'FrWork/admin_lte/vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Font Awesome -->
-    {% comment %} <link href="{% static '/FrWork/admin_lte/vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"> {% endcomment %}
+    {% comment %} <link href="{% static 'FrWork/admin_lte/vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet"> {% endcomment %}
     <!-- NProgress -->
-    <link href="{% static '/FrWork/admin_lte/vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+    <link href="{% static 'FrWork/admin_lte/vendors/nprogress/nprogress.css' %}" rel="stylesheet">
     <!-- iCheck -->
-    <link href="{% static '/FrWork/admin_lte/vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
-	
-
+    <link href="{% static 'FrWork/admin_lte/vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
     <!-- bootstrap-progressbar -->
-    <link href="{% static '/FrWork/admin_lte/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet">
+    <link href="{% static 'FrWork/admin_lte/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet">
     <!-- JQVMap -->
-    <link href="{% static '/FrWork/admin_lte/vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'FrWork/admin_lte/vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet"/>
     <!-- bootstrap-daterangepicker -->
-    <link href="{% static '/FrWork/admin_lte/vendors/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet">
-
+    <link href="{% static 'FrWork/admin_lte/vendors/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet">
     <!-- Custom Theme Style -->
-    <link href="{% static '/FrWork/admin_lte/build/css/custom.min.css' %}" rel="stylesheet">
+    <link href="{% static 'FrWork/admin_lte/build/css/custom.min.css' %}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -41,7 +38,10 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="http://localhost:8000" class="site_title"><i class="fa fa-paw"></i> <span>J_CODES</span></a>
+              <a href="http://localhost:8000" class="site_title">
+                <img src="{% static 'FrWork/admin_lte/build/images/icon.jpg' %}" alt="Logo de J CODES" style="width: 40px; height: 40px;">
+                 <span> J_CODES</span>
+              </a>
             </div>
             <div class="clearfix"></div>
             <br />
@@ -52,35 +52,38 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.html">Fornite</a></li>
-                      <li><a href="index2.html">GTA V </a></li>
+                      <li><a href="indexF.html">Fornite</a></li>
+                      <li><a href="index2.html">GTA V</a></li>
                       <li><a href="index3.html">#</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="listar"><i class= "fa fa-users"></i> Listar</a></li>
-                      <li><a href="agregar"><i class= "fa fa-user-plus"></i> Agregar</a></li>
-                      <li><a href="actualizar"><i class= "fa fa-user-edit"></i> Actualizar</a></li>
-                      <li><a href="eliminar"><i class= "fa fa-user-times"></i> Eliminar</a></li>
-                    </ul>                  
+                      <li><a href="listar"><i class="fa fa-users"></i> Listar</a></li>
+                      <li><a href="agregar"><i class="fa fa-user-plus"></i> Agregar</a></li>
+                      <li><a href="actualizar"><i class="fas fa-edit"></i> Actualizar</a></li>
+                      <li><a href="eliminar"><i class="fa fa-user-times"></i> Eliminar</a></li>
+                    </ul>       
+                  </li>
+                  <li><a><i class="fa fa-product-hunt"></i> Productos <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="listar2"><i class="fa fa-users"></i> Listar</a></li>
+                      <li><a href="agregar2"><i class="fa fa-user-plus"></i> Agregar</a></li>
+                      <li><a href="actualizar2"><i class="fas fa-edit"></i> Actualizar</a></li>
+                      <li><a href="eliminar2"><i class="fa fa-user-times"></i> Eliminar</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
             <!-- /menu footer buttons -->
           </div>
-          
-        </div> 
         </div>
         <!-- /top navigation -->
 
-
-
         <!-- ****************************************   -->
-
         {% block content %}
         {% endblock %}
-
-
         <!-- footer content -->
         <footer>
           <div class="pull-right">
@@ -93,45 +96,43 @@
     </div>
 
     <!-- jQuery -->
-    <script src="{% static '/FrWork/admin_lte/vendors/jquery/dist/jquery.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/jquery/dist/jquery.min.js' %}"></script>
     <!-- Bootstrap -->
-    <script src="{% static '/FrWork/admin_lte/vendors/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
     <!-- FastClick -->
-    <script src="{% static '/FrWork/admin_lte/vendors/fastclick/lib/fastclick.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/fastclick/lib/fastclick.js' %}"></script>
     <!-- NProgress -->
-    <script src="{% static '/FrWork/admin_lte/vendors/nprogress/nprogress.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/nprogress/nprogress.js' %}"></script>
     <!-- Chart.js -->
-    <script src="{% static '/FrWork/admin_lte/vendors/Chart.js/dist/Chart.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/Chart.js/dist/Chart.min.js' %}"></script>
     <!-- gauge.js -->
-    <script src="{% static '/FrWork/admin_lte/vendors/gauge.js/dist/gauge.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/gauge.js/dist/gauge.min.js' %}"></script>
     <!-- bootstrap-progressbar -->
-    <script src="{% static '/FrWork/admin_lte/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js' %}"></script>
     <!-- iCheck -->
-    <script src="{% static '/FrWork/admin_lte/vendors/iCheck/icheck.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/iCheck/icheck.min.js' %}"></script>
     <!-- Skycons -->
-    <script src="{% static '/FrWork/admin_lte/vendors/skycons/skycons.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/skycons/skycons.js' %}"></script>
     <!-- Flot -->
-    <script src="{% static '/FrWork/admin_lte/vendors/Flot/jquery.flot.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/Flot/jquery.flot.pie.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/Flot/jquery.flot.time.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/Flot/jquery.flot.stack.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/Flot/jquery.flot.resize.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/Flot/jquery.flot.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/Flot/jquery.flot.pie.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/Flot/jquery.flot.time.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/Flot/jquery.flot.stack.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/Flot/jquery.flot.resize.js' %}"></script>
     <!-- Flot plugins -->
-    <script src="{% static '/FrWork/admin_lte/vendors/flot.orderbars/js/jquery.flot.orderBars.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/flot-spline/js/jquery.flot.spline.min.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/flot.curvedlines/curvedLines.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/flot.orderbars/js/jquery.flot.orderBars.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/flot-spline/js/jquery.flot.spline.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/flot.curvedlines/curvedLines.js' %}"></script>
     <!-- DateJS -->
-    <script src="{% static '/FrWork/admin_lte/vendors/DateJS/build/date.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/DateJS/build/date.js' %}"></script>
     <!-- JQVMap -->
-    <script src="{% static '/FrWork/admin_lte/vendors/jqvmap/dist/jquery.vmap.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/jqvmap/dist/jquery.vmap.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js' %}"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="{% static '/FrWork/admin_lte/vendors/moment/min/moment.min.js' %}"></script>
-    <script src="{% static '/FrWork/admin_lte/vendors/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
-
+    <script src="{% static 'FrWork/admin_lte/vendors/moment/min/moment.min.js' %}"></script>
+    <script src="{% static 'FrWork/admin_lte/vendors/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
     <!-- Custom Theme Scripts -->
-    <script src="{% static '/FrWork/admin_lte/build/js/custom.min.js' %}"></script>
-	
+    <script src="{% static 'FrWork/admin_lte/build/js/custom.min.js' %}"></script>
   </body>
 </html>

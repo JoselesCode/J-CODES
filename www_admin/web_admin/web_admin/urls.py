@@ -28,4 +28,9 @@ urlpatterns = [
     path('agregar', views.agregar, name= "agregar"),   
     path('actualizar', views.actualizar, name= "actualizar"),   
     path('eliminar', views.eliminar, name= "eliminar"),
+ 
+    path('listar2', views.listar2, name= "listar2"),   
+    path('agregar2', views.agregar2, name= "agregar2"),   
+    path('actualizar2', views.actualizar2, name= "actualizar2"),   
+    path('eliminar2', views.eliminar2, name= "eliminar2"),
     ]

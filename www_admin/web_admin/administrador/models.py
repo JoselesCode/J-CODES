@@ -8,5 +8,11 @@ class Usuarios(models.Model):
     telefono =models.IntegerField(null=False)
     f_nac  = models.DateField(null=True)
     f_registro = models.DateTimeField(auto_now_add=True, null=True)
+class Productos(models.Model):
+    id2 = models.IntegerField(primary_key=True)
+    nombre2 = models.CharField(max_length=30,null = False)
+    precio2 =models.IntegerField(null=False)
+    f_registro2 = models.DateTimeField(auto_now_add=True, null=True)
     class Meta:
         db_table = 'usuarios'
+        db_table = 'productos'

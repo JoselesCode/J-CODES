@@ -40,10 +40,6 @@ def agregar(request):
     else:
         return render(request, "crud_usuarios/agregar.html")
 
-    
-
-
-
 def actualizar(request): 
     if request.method == 'POST':
         if (request.POST.get('id') and
@@ -84,3 +80,11 @@ def eliminar(request):
         datos = {'usuarios' : users}                
         return render(request,"crud_usuarios/eliminar.html", datos)
 
+def actualizar2(request):                    #  <<==========
+    return render(request,"crud_productos/actualizar2.html") 
+def agregar2(request):                    #  <<==========
+    return render(request,"crud_productos/agregar2.html") 
+def listar2(request):                    #  <<==========
+    return render(request,"crud_productos/listar2.html") 
+def eliminar2(request):                    #  <<==========
+    return render(request,"crud_productos/eliminar2.html") 
