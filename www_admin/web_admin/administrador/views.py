@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render
 from .models import Usuarios
+from .models import Productos
 
 
 
@@ -88,3 +89,9 @@ def listar2(request):                    #  <<==========
     return render(request,"crud_productos/listar2.html") 
 def eliminar2(request):                    #  <<==========
     return render(request,"crud_productos/eliminar2.html") 
+
+def indexF(request):                    #  <<==========
+    return render(request,"indexF.html")  
+
+def indexgta(request):                    #  <<==========
+    return render(request,"indexgta.html")  

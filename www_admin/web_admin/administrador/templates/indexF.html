@@ -1,11 +1,78 @@
-{% extends '../index_master.htmlex_master.html' %}
+{% extends 'index_master.html' %}
+
+{% load static %}
+
+{% block title %}
+Compra de tarjetas V-Bucks para Fornite
+{% endblock %}
 
 {% block content %}
-
-    <!-- page content -->
-        <div class="right_col" role="main">
-        <h1> En Proceso pagina fornite<H1>  
-        
+    <div class="container mt-5">
+        <!-- Texto centralizado -->
+        <div class="text-center">
+            <h1>TARJETA DE PAVOS</h1>
+            <h2>¿QUÉ SON LOS PAVOS?</h2>
+            <p><strong>Descripción:</strong> La tarjeta de pavos de Fortnite te permite obtener V-Bucks, la moneda virtual del juego, que puedes utilizar para comprar objetos en la tienda de Fortnite, como skins, bailes, pases de batalla y más.</p>
+            <p>No esperes más y mejora tu experiencia en Fortnite con la tarjeta de pavos.</p>
+            <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+            <hr>
         </div>
-        <!-- /page content -->
+        <hr>
+        <br>
+        <br>
+        <div class="container">
+            <!-- Descripción 1 -->
+            <div class="card d-flex flex-row align-items-center" style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/1000_pavos.jpeg' %}" alt="Tarjeta 1000 V-Bucks" style="width: 300px; height: 300px; margin-right: 1100px;">
+                <div class="card-info">
+                    <h2>Tarjeta 1000 V-Bucks</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $1000 V-Bucks para utilizar dentro del videojuego Fornite.</p>
+                    <p><strong>Precio:</strong> CLP 8,500</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+                </div>
+            </div>
+
+            <!-- Descripción 2 -->
+            <div class="card d-flex flex-row align-items-center" style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/2800_pavos.jpeg' %}" alt="Tarjeta 2800 V-Bucks" style="width: 300px; height: 300px; margin-right: 1100px;">
+                <div class="card-info">
+                    <h2>Tarjeta 2800 V-Bucks</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $2800 V-Bucks para utilizar dentro del videojuego Fornite.</p>
+                    <p><strong>Precio:</strong> CLP 16,000</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+                </div>
+            </div>
+
+            <!-- Descripción 3 -->
+            <div class="card d-flex flex-row align-items-center" style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/5000_pavos.jpeg' %}" alt="Tarjeta 5000 V-Bucks" style="width: 300px; height: 300px; margin-right: 1100px;">
+                <div class="card-info">
+                    <h2>Tarjeta 5000 V-Bucks</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $5000 V-Bucks para utilizar dentro del videojuego Fornite.</p>
+                    <p><strong>Precio:</strong> CLP 32,000</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+                </div>
+            </div>
+
+            <!-- Descripción 4 -->
+            <div class="card d-flex flex-row align-items-center">
+                <img src="{% static 'FrWork/admin_lte/build/images/13500_pavos.jpeg' %}" alt="Tarjeta 13500 V-Bucks" style="width: 300px; height: 300px; margin-right: 1100px;">
+                <div class="card-info">
+                    <h2>Tarjeta 13500 V-Bucks</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de 13500 V-Bucks para utilizar dentro del videojuego Fornite.</p>
+                    <p><strong>Precio:</strong> CLP 65,000</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
