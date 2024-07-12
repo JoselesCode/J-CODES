@@ -83,10 +83,29 @@ def eliminar(request):
 
 def actualizar2(request):                    #  <<==========
     return render(request,"crud_productos/actualizar2.html") 
-def agregar2(request):                    #  <<==========
-    return render(request,"crud_productos/agregar2.html") 
-def listar2(request):                    #  <<==========
-    return render(request,"crud_productos/listar2.html") 
+
+def agregar2(request):   
+    if request.method == 'POST':
+        if (request.POST.get('nombre2') and 
+            request.POST.get('precio2')):
+            prod = Productos()
+            prod.nombre2 = request.POST.get('nombre2')
+            prod.precio2 = request.POST.get('precio2')
+            prod.save()
+            return redirect('listar2')  # Asegúrate de que 'listar' es el nombre correcto en urls.py
+        else:
+            return render(request, "crud_productos/agregar2.html", {
+                'error': 'Todos los campos son obligatorios.'
+            })
+    else:              #  <<==========
+        return render(request,"crud_productos/agregar2.html") 
+
+def listar2(request): 
+    prod = Productos.objects.all()
+    datos2 = {'productos': prod}                   #  <<==========
+    return render(request,"crud_productos/listar2.html",prod) 
+
+
 def eliminar2(request):                    #  <<==========
     return render(request,"crud_productos/eliminar2.html") 
 
