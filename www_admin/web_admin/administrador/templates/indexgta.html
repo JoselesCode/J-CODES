@@ -1,11 +1,93 @@
 {% extends 'index_master.html' %}
 
-{% block content %}
+{% load static %}
 
-    <!-- page content -->
-        <div class="right_col" role="main">
-            <h1> En Proceso pagina GTA V <H1>    
-        
+
+{% block title %}
+Compra de tarjetas Tiburón para GTA V
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <!-- Texto centralizado -->
+        <div class="text-center">
+            <h1>Compra de tarjetas Tiburón para GTA V </h1>
+            <h2>¿QUÉ SON LAS TARJETAS TIBURÓN?</h2>
+            <p><strong>Descripción:</strong></p>
+            <p>El dinero manda en esta ciudad. Resuelve tus problemas monetarios y consigue todo lo que quieras en Los Santos y el condado de Blaine con la compra de packs de pasta de Grand Theft Auto Online.</p>
+            <p>Todo el dinero comprado se depositará automáticamente en la cuenta bancaria de tu personaje.</p>
+            <p>Gasta con prudencia o la terapia monetaria será efímera.</p>
+            <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC</p>
         </div>
-        <!-- /page content -->
+        <hr>
+        <br>
+        <br>
+        <div class="container">
+            <!-- Descripción 1 -->
+            <div class="card d-flex flex-row align-items-center" style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/Tiburonmegalodonte.png' %}" alt="Tarjeta 1000 V-Bucks" style="width: 300px; height: 300px; margin-right: 990px;">
+                <div class="card-info">
+                    <h2>Tarjeta Tiburón megalodonte</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $10.000.000 para utilizar dentro del videojuego Grand Theft Auto Online.</p>
+                    <p><strong>Precio:</strong> CLP 43,500</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+                </div>
+            </div>
+
+            <!-- Descripción 2 -->
+            <div class="card d-flex flex-row align-items-center" style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/tiburonballena.png' %}" alt="Tarjeta 2800 V-Bucks" style="width: 300px; height: 300px; margin-right: 990px;">
+                <div class="card-info">
+                    <h2>Tarjeta Tiburón ballena</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $4.250.000 para     utilizar dentro del videojuego Grand Theft Auto Online.</p>
+                    <p><strong>Precio:</strong> CLP 22,000</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+                </div>
+            </div>
+
+            <!-- Descripción 3 -->
+            <div class="card d-flex flex-row align-items-center" style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/grantiburonblanco.png' %}" alt="Tarjeta 5000 V-Bucks" style="width: 300px; height: 300px; margin-right: 990px;">
+                <div class="card-info">
+                    <h2>Tarjeta tiburón blanco</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $1.500.000 para utilizar dentro del videojuego Grand Theft Auto Online.</p>
+                    <p><strong>Precio:</strong> CLP 9,500</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+                </div>
+            </div>
+
+            <!-- Descripción 4 -->
+            <div class="card d-flex flex-row align-items-center"style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/tiburontoro.png' %}" alt="Tarjeta 13500 V-Bucks" style="width: 300px; height: 300px; margin-right: 990px;">
+                <div class="card-info">
+                    <h2>Tarjeta Tiburón toro</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $600.000 para utilizar dentro del videojuego Grand Theft Auto Online.</p>
+                    <p><strong>Precio:</strong> CLP 5,500</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+
+                </div>
+            </div>   
+            <!-- Descripción 5 -->
+            <div class="card d-flex flex-row align-items-center"style="margin-bottom: 20px;">
+                <img src="{% static 'FrWork/admin_lte/build/images/tiburontigre.png' %}" alt="Tarjeta 13500 V-Bucks" style="width: 300px; height: 300px; margin-right: 990px;">
+                <div class="card-info">
+                    <h2>Tarjeta Tiburón tigre</h2>
+                    <p>Esta tarjeta te brinda acceso a un monto de $250.000 para utilizar dentro del videojuego Grand Theft Auto Online.</p>
+                    <p><strong>Precio:</strong> CLP 3,000</p>
+                    <p><strong>Plataforma para Canjear:</strong> Xbox, PlayStation y PC </p>
+                    <button name="submit1" type="submit" class="btn btn-dark">
+                        <i class="fa fa-cart-plus"></i> Agregar Al Carro
+
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
