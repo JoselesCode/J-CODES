@@ -9,16 +9,42 @@ TEMPATES_DIRS=(
     'os.patch.join(BASE_DIR,"templates")'
 )
 
-# Create your views here.
+# INDEX PRINCIPAL.
 def index(request):                    #  <<==========
     return render(request,"index.html")      #  <<==========
 
+# INDEX FORNITE.
+def indexF(request):                    #  <<==========
+    return render(request,"indexF.html")  
+
+# INDEX GTA V ONLINE
+def indexgta(request):                    #  <<==========
+    return render(request,"indexgta.html")  
+
+# INDEX FORMULARIO
+def indexform(request):
+    return render(request,"indexform.html") 
+
+
+# CRUD 
+
+#L-I-S-T-A-R
+
+# LISTAR USUARIOS 
 def listar(request):      
     users = Usuarios.objects.all()
     datos = {'usuarios' : users}
     return render(request,"crud_usuarios/listar.html",datos)
 
+# LISTAR PRODUCTOS 
+def listar2(request): 
+    prod = Productos.objects.all()
+    datos2 = {'productos': prod}                   
+    return render(request,"crud_productos/listar2.html",datos2) 
 
+#A-G-R-E--G-A-R
+
+# AGREGAR USUARIOS 
 def agregar(request):
     if request.method == 'POST':
         if (request.POST.get('nombre') and 
@@ -33,7 +59,7 @@ def agregar(request):
             user.telefono = request.POST.get('telefono')
             user.f_nac = request.POST.get('f_nac')
             user.save()
-            return redirect('listar')  # Asegúrate de que 'listar' es el nombre correcto en urls.py
+            return redirect('listar')  
         else:
             return render(request, "crud_usuarios/agregar.html", {
                 'error': 'Todos los campos son obligatorios.'
@@ -41,6 +67,26 @@ def agregar(request):
     else:
         return render(request, "crud_usuarios/agregar.html")
 
+# AGREGAR PRODUCTOS  /user= prod
+def agregar2(request):   
+    if request.method == 'POST':
+        if (request.POST.get('nombre2') and 
+            request.POST.get('precio2')):
+            prod = Productos()
+            prod.nombre2 = request.POST.get('nombre2')
+            prod.precio2 = request.POST.get('precio2')
+            prod.save()
+            return redirect('listar2')  
+        else:
+            return render(request, "crud_productos/agregar2.html", {
+                'error': 'Todos los campos son obligatorios.'
+            })
+    else:              
+        return render(request,"crud_productos/agregar2.html") 
+
+#A-C-T-U-A-L-I-Z-A-R
+
+# ACTUALIZAR USUARIOS
 def actualizar(request): 
     if request.method == 'POST':
         if (request.POST.get('id') and
@@ -67,7 +113,30 @@ def actualizar(request):
         datos = {'usuarios' : users}
         return render(request,"crud_usuarios/actualizar.html", datos)
 
+# ACTUALIZAR PRODUCTOS
+def actualizar2(request): 
+    if request.method == 'POST':
+        if (request.POST.get('id2') and
+            request.POST.get('nombre2') and 
+            request.POST.get('precio2')):
+            prod_id_old2 = request.POST.get('id2')
+            prod_old2 = Productos()
+            prod_old2 = Productos.objects.get(id = prod_id_old2)
+            prod = Productos()
+            prod.id2 = request.POST.get('id2')
+            prod.nombre2 = request.POST.get('nombre2')
+            prod.precio2 = request.POST.get('precio2')
+            prod.f_registro2 = prod_old2.f_registro2
+            prod.save()
+            return redirect('listar2')
+    else:
+        prod = Productos.objects.all()
+        datos2 = {'productos' : prod}
+        return render(request,"crud_productos/actualizar2.html", datos2)
 
+#E-L-I-M-I-N-A-R
+
+#ELIMINAR USUARIOS
 def eliminar(request):    
     if request.method == 'POST':
         if request.POST.get('id'):
@@ -81,36 +150,17 @@ def eliminar(request):
         datos = {'usuarios' : users}                
         return render(request,"crud_usuarios/eliminar.html", datos)
 
-def actualizar2(request):                    #  <<==========
-    return render(request,"crud_productos/actualizar2.html") 
-
-def agregar2(request):   
+#ELIMINAR PRODUCTOS
+def eliminar2(request): 
     if request.method == 'POST':
-        if (request.POST.get('nombre2') and 
-            request.POST.get('precio2')):
-            prod = Productos()
-            prod.nombre2 = request.POST.get('nombre2')
-            prod.precio2 = request.POST.get('precio2')
-            prod.save()
-            return redirect('listar2')  # Asegúrate de que 'listar' es el nombre correcto en urls.py
-        else:
-            return render(request, "crud_productos/agregar2.html", {
-                'error': 'Todos los campos son obligatorios.'
-            })
-    else:              #  <<==========
-        return render(request,"crud_productos/agregar2.html") 
+        if request.POST.get('id2'):
+            id_a_borrar2 = request.POST.get('id2')
+            tupla = Productos.objects.get(id2 = id_a_borrar2)
+            tupla.delete()
+            return redirect('listar2')
 
-def listar2(request): 
-    prod = Productos.objects.all()
-    datos2 = {'productos': prod}                   #  <<==========
-    return render(request,"crud_productos/listar2.html",prod) 
+    else:
+        prod = Productos.objects.all()
+        datos2 = {'productos' : prod}                               
+        return render(request,"crud_productos/eliminar2.html",datos2) 
 
-
-def eliminar2(request):                    #  <<==========
-    return render(request,"crud_productos/eliminar2.html") 
-
-def indexF(request):                    #  <<==========
-    return render(request,"indexF.html")  
-
-def indexgta(request):                    #  <<==========
-    return render(request,"indexgta.html")  

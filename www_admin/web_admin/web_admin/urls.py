@@ -33,7 +33,9 @@ urlpatterns = [
     path('agregar2', views.agregar2, name= "agregar2"),   
     path('actualizar2', views.actualizar2, name= "actualizar2"),   
     path('eliminar2', views.eliminar2, name= "eliminar2"),
+
     path('indexF', views.indexF, name= "indexF"), 
     path('indexgta', views.indexgta, name= "indexgta"),
+    path('indexform', views.indexform, name= "indexform"),
       
     ]

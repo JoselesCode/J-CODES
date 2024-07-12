@@ -1,0 +1,64 @@
+{% extends 'index_master.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!-- page content -->
+    <div class="right_col" role="main">
+    </header>
+    <section id="Formulario" style="font-size: 18px; text-align: justify;">
+        <h2>Formulario De Contacto</h2>
+<form>
+    <div class="form-group row">
+        <label for="nombre1" class="col-4 col-form-label">Nombre:</label> 
+        <div class="col-8">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-address-book"></i>
+            </div>
+            </div> 
+            <input id="nombre1" name="nombre1" type="text" required="required" class="form-control">
+        </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="apellido2" class="col-4 col-form-label">Apellido:</label> 
+        <div class="col-8">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-address-book-o"></i>
+            </div>
+            </div> 
+            <input id="apellido2" name="apellido2" type="text" class="form-control" required="required">
+        </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="asunto3" class="col-4 col-form-label">Asunto:</label> 
+        <div class="col-8">
+        <div class="input-group">
+            <div class="input-group-prepend">
+            <div class="input-group-text">
+                <i class="fa fa-bullhorn"></i>
+            </div>
+            </div> 
+            <input id="asunto3" name="asunto3" type="text" class="form-control" required="required">
+        </div>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="textarea" class="col-4 col-form-label">Mensaje:</label> 
+        <div class="col-8">
+        <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control" required="required"></textarea>
+        </div>
+    </div> 
+    <div class="form-group row">
+        <div class="offset-4 col-8">
+        <button name="submit" type="submit" class="btn btn-primary">Crear Solicitud</button>
+        </div>
+    </div>
+</form>
+        <!-- /page content -->
+{% endblock %}
