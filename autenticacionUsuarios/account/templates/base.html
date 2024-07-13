@@ -27,7 +27,7 @@
         </a>
       </div>
       {% if request.user.is_authenticated %}
-        HOLA bro {{ request.user.first_name|default:request.user.username }},
+        HOLA ADMIN {{ request.user.first_name|default:request.user.username }},
         <form action="{% url 'logout' %}" method="post">
           {% csrf_token %}
           <button type="submit">
