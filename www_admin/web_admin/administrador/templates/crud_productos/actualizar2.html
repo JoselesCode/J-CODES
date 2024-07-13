@@ -12,7 +12,7 @@
 
 
         <div class="form-group row">
-            <label for="nombre" class="col-4 col-form-label">ID PRODUCTO</label> 
+            <label for="nombre2" class="col-4 col-form-label">ID PRODUCTO</label> 
             <div class="col-8">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -21,9 +21,9 @@
                         </div>
                     </div> 
                     
-                    <select id="id" name="id">    
+                    <select id="id2" name="id2">    
                     {% for u in productos %}
-                        <option value="{{u.id}}">{{u.id}}</option>
+                        <option value="{{u.id2}}">{{u.id2}}</option>
                     {% endfor%}
                     </select>
 
@@ -41,7 +41,7 @@
                             <i class="fa fa-shopping-basket"></i>
                         </div>
                     </div> 
-                    <input id="nombre2" name="nombre" type="text" class="form-control" required="required">
+                    <input id="nombre2" name="nombre2" type="text" class="form-control" required="required">
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                             <i class="fa fa-money"></i>
                         </div>
                     </div> 
-                    <input id="precio2" name="precio" type="number" class="form-control" required="required">
+                    <input id="precio2" name="precio2" type="number" class="form-control" required="required">
                 </div>
             </div>
         </div>

@@ -121,7 +121,7 @@ def actualizar2(request):
             request.POST.get('precio2')):
             prod_id_old2 = request.POST.get('id2')
             prod_old2 = Productos()
-            prod_old2 = Productos.objects.get(id = prod_id_old2)
+            prod_old2 = Productos.objects.get(id2 = prod_id_old2)
             prod = Productos()
             prod.id2 = request.POST.get('id2')
             prod.nombre2 = request.POST.get('nombre2')
