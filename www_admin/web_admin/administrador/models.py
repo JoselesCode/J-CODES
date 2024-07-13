@@ -16,3 +16,4 @@ class Productos(models.Model):
     class Meta:
         db_table = 'usuarios'
         db_table = 'productos'
+

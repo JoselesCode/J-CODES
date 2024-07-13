@@ -2,8 +2,6 @@ from django.shortcuts import redirect, render
 from .models import Usuarios
 from .models import Productos
 
-
-
 # Create your views here.
 TEMPATES_DIRS=(
     'os.patch.join(BASE_DIR,"templates")'

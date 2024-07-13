@@ -20,6 +20,7 @@ from django import views     #  <<==========
 from administrador import views   #  <<==========
 from . import views
 
+
 urlpatterns = [
     path('', views.index, name= "index"),
     path('listar', views.listar, name= "listar"),   
@@ -35,5 +36,7 @@ urlpatterns = [
     path('indexF', views.indexF, name= "indexF"), 
     path('indexgta', views.indexgta, name= "indexgta"),  
     path('indexform', views.indexform, name= "indexform"),
+
+
 
 ]

@@ -20,6 +20,7 @@ from django.conf.urls import include
 from django.urls import include  #  <<==========
 from administrador import views   #  <<==========
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index), 
@@ -37,5 +38,5 @@ urlpatterns = [
     path('indexF', views.indexF, name= "indexF"), 
     path('indexgta', views.indexgta, name= "indexgta"),
     path('indexform', views.indexform, name= "indexform"),
-      
+       
     ]
